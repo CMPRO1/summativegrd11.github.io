@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SimplyWeather - CharlieM</title>
+</head>
+<body>
+    <style>
+    body {
+      background: url("https://images.hdqwalls.com/wallpapers/firewatch-digital-art-4k-a3.jpg") no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    </style>
+    <div class="splash">
+        <h1 class="fade-in">
+          <svg> <!--this portion is a animation I learnt how to do from: https://codepen.io/ykadosh/pen/PxvbYQ -->
+            <g>
+              <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+            </g>
+            <g>
+              <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+            </g>
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#e20000;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ffd000;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg> <!--end of the "s" animation-->
+        </h1>
+    </div>
+    <section class="banner">
+        <div class="container">
+          <h2 class="heading">SimplyWeather☁️</h2>
+          <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete" style="width:460px;">
+              <input id="myInput" type="text" name="myCountry" placeholder="Anywhere."> 
+            </div>
+            <span class="notification"></span>
+            <button type="submit">Display</button>
+            <button class= button onClick="window.location.href=window.location.href">Unshow All</button>
+          </form>
+        </div>
+      </section>
+      <section class="weatherCards">
+        <div class="container">
+          <ul class="grid"></ul>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+        </div>
+      </footer>
+</body>
+<script src="script.js"></script>
+</html>
